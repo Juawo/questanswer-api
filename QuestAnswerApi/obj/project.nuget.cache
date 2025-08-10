@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zW6qAsAe/zj5GY/A1MxBC5pTCrhR+Z++bI61L+TgWzq5817FhcmToAD0deAqZot8VrtBUhlDmKOZFRMQ6eiRyw==",
+  "dgSpecHash": "UVawzUGhqSh5kluoyYbhPIbGoEIfcjKgv3djsGgIeEYS4powefaN4K75tn3swb601Mbtb1aJIybgE8xPT+m1+g==",
   "success": true,
   "projectFilePath": "/home/joao-pedro/Documentos/DevFiles/GameDev/PersonalProjects/QuestAnswer/src/api/QuestAnswerApi/QuestAnswerApi.csproj",
   "expectedPackageFiles": [
@@ -20,6 +20,7 @@
     "/home/joao-pedro/.nuget/packages/microsoft.entityframeworkcore.analyzers/9.0.8/microsoft.entityframeworkcore.analyzers.9.0.8.nupkg.sha512",
     "/home/joao-pedro/.nuget/packages/microsoft.entityframeworkcore.design/9.0.8/microsoft.entityframeworkcore.design.9.0.8.nupkg.sha512",
     "/home/joao-pedro/.nuget/packages/microsoft.entityframeworkcore.relational/9.0.8/microsoft.entityframeworkcore.relational.9.0.8.nupkg.sha512",
+    "/home/joao-pedro/.nuget/packages/microsoft.entityframeworkcore.tools/9.0.8/microsoft.entityframeworkcore.tools.9.0.8.nupkg.sha512",
     "/home/joao-pedro/.nuget/packages/microsoft.extensions.apidescription.server/6.0.5/microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "/home/joao-pedro/.nuget/packages/microsoft.extensions.caching.abstractions/9.0.8/microsoft.extensions.caching.abstractions.9.0.8.nupkg.sha512",
     "/home/joao-pedro/.nuget/packages/microsoft.extensions.caching.memory/9.0.8/microsoft.extensions.caching.memory.9.0.8.nupkg.sha512",
