@@ -11,6 +11,7 @@ namespace QuestAnswerApi.Models
         [Key]
         public required int Id { get; set; }
         public required string Answer { get; set; }
+        public required string Category { get; set; }
         public required List<string> Tips { get; set; }
 
     }
