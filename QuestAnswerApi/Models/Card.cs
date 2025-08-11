@@ -1,18 +1,19 @@
-using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
+namespace QuestAnswerApi.Models;
 
-namespace QuestAnswerApi.Models
+public class Card
 {
-    public class Card
-    {
-        [Key]
-        public required int Id { get; set; }
-        public required string Answer { get; set; }
-        public required string Category { get; set; }
-        public required List<string> Tips { get; set; }
+    [Key]
+    public  int Id { get; set; }
+    public  string Answer { get; set; }
+    public  string Category { get; set; }
+    public  List<string> Tips { get; set; }
 
+    public Card() { }
+    public Card(string answer, string category, List<string> tips)
+    {
+        Answer = answer;
+        Category = category;
+        Tips = tips;
     }
 }
