@@ -4,10 +4,10 @@ using Microsoft.AspNetCore.Mvc;
 using QuestAnswerApi.DTOs.Request;
 using QuestAnswerApi.Mappers.CardMappers;
 using QuestAnswerApi.Service.CardServices;
-using QuestAnswerApi.Models.Card
+using QuestAnswerApi.Models;
 using RouteAttribute = Microsoft.AspNetCore.Mvc.RouteAttribute;
 
-namespace QuestAnswerApi.Controllers.Card;
+namespace QuestAnswerApi.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -41,13 +41,31 @@ public class CardController : ControllerBase
     }
     [HttpPut]
     [Route("{id}")]
-    public async Task<IActionResult> UpdateCard([FromRoute] long id,[FromBody] Card card)
+    public async Task<IActionResult> UpdateCard([FromRoute] long id, [FromBody] CreateCardDto cardDto)
     {
-        return Task<IActionResult>;
+        Card? card = await _cardServices.GetCardById(id);
+        if (card == null)
+        {
+            return NotFound();
+        }
+        card.Answer = cardDto.Answer;
+        card.Category = cardDto.Category;
+        card.Tips = cardDto.Tips;
+
+        await _cardServices.UpdateCard(card);
+        return Ok(card);
     }
-    [HttpGet]
-    public async Task<IActionResult> GetAllCards()
+    [HttpDelete]
+    [Route("{id}")]
+    public async Task<IActionResult> DeleteCard([FromRoute] long id)
     {
-        return Task<IActionResult>;
+        var card = _cardServices.GetCardById(id);
+        if (card == null)
+        {
+            return NotFound("Card not found!");
+        }
+        
+        await _cardServices.DeleteCard(id);
+        return NoContent();
     }
 }
