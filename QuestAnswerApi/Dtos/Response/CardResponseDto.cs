@@ -1,7 +1,7 @@
 namespace QuestAnswerApi.DTOs.Response;
 
 public record CardResponseDto(
-    int Id,
+    long Id,
     string Answer,
     string Category,
     List<string> Tips);

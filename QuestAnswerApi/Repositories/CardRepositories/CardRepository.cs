@@ -20,7 +20,7 @@ public class CardRepository : ICardRepository
         return cards;
     }
     
-    public async Task<Card> GetCardByIdAsync(int id)
+    public async Task<Card> GetCardByIdAsync(long id)
     {
         Card? card = await _context.Cards.FindAsync(id);
 
@@ -34,7 +34,7 @@ public class CardRepository : ICardRepository
 
     }
 
-    public async Task<bool> DeleteCardAsync(int id)
+    public async Task<bool> DeleteCardAsync(long id)
     {
 
         Card cardSearch = await GetCardByIdAsync(id);
