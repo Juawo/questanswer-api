@@ -37,7 +37,7 @@ public class CardController : ControllerBase
     {
         var card = cardDto.ToCardFromCreateDto();
         await _cardServices.CreateCard(card);
-        return CreatedAtAction(nameof(GetCardById), new { id = card.Id });
+        return CreatedAtAction(nameof(GetCardById), new { id = card.Id }, card);
     }
     [HttpPut]
     [Route("{id}")]
@@ -59,7 +59,7 @@ public class CardController : ControllerBase
     [Route("{id}")]
     public async Task<IActionResult> DeleteCard([FromRoute] long id)
     {
-        var card = _cardServices.GetCardById(id);
+        var card = await _cardServices.GetCardById(id);
         if (card == null)
         {
             return NotFound("Card not found!");
