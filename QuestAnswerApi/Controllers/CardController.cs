@@ -31,6 +31,12 @@ public class CardController : ControllerBase
         var card = await _cardServices.GetCardById(id);
         return Ok(card);
     }
+    [HttpGet("category/{cateogry}")]
+    public async Task<IActionResult> GetAllCards([FromRoute]string cateogry)
+    {
+        var cards = await _cardServices.GetAllCardsByCategory(cateogry);
+        return Ok(cards);
+    }
 
     [HttpPost]
     public async Task<IActionResult> CreateCard([FromBody] CreateCardDto cardDto)
@@ -64,7 +70,7 @@ public class CardController : ControllerBase
         {
             return NotFound("Card not found!");
         }
-        
+
         await _cardServices.DeleteCard(id);
         return NoContent();
     }

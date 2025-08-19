@@ -27,6 +27,12 @@ public class CardRepository : ICardRepository
         return card;
     }
 
+    public async Task<IEnumerable<Card>> GetAllCardsByCategoryAsync(string category)
+    {
+        var cards = await _context.Cards.Where(c => c.Category.Equals(category)).ToListAsync();
+        return cards;
+    }
+
     public async Task CreateCardAsync(Card card)
     {
         await _context.AddAsync(card);

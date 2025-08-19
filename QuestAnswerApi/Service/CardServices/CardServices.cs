@@ -25,6 +25,11 @@ public class CardServices : ICardServices
         return await _cardRepository.GetAllCardsAsync();
     }
 
+    public async Task<IEnumerable<Card>> GetAllCardsByCategory(string category)
+    {
+        return await _cardRepository.GetAllCardsByCategoryAsync(category);
+    }
+
     public async Task<Card?> GetCardById(long id)
     {
         return await _cardRepository.GetCardByIdAsync(id);
