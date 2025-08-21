@@ -27,7 +27,7 @@ public class CardServices : ICardServices
 
     public async Task<IEnumerable<Card>> GetAllCardsByCategory(string category)
     {
-        return await _cardRepository.GetAllCardsByCategoryAsync(category);
+        return await _cardRepository.GetAllCardsByCategoryAsync(category.ToLower());
     }
 
     public async Task<Card?> GetCardById(long id)
