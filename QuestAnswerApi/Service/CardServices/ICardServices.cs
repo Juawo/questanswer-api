@@ -4,7 +4,7 @@ namespace QuestAnswerApi.Service.CardServices;
 
 public interface ICardServices
 {
-    Task<IEnumerable<Card>> GetAllCards();
+    Task<IEnumerable<Card>> GetAllCards(List<long> exlcudeIds);
     Task<Card?> GetCardById(long id);
     Task<IEnumerable<Card>> GetAllCardsByCategory(string category);
     Task CreateCard(Card card);

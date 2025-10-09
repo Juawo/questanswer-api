@@ -20,9 +20,16 @@ public class CardController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetAllCards()
+    public async Task<IActionResult> GetAllCards([FromQuery] string? exclude)
     {
-        var cards = await _cardServices.GetAllCards();
+        List<long> exlcudeIds = [];
+        if (!string.IsNullOrEmpty(exclude))
+        {
+            exlcudeIds = [.. exclude.Split(',')
+            .Select(idStr => long.TryParse(idStr, out var id) ? id : -1)
+            .Where(id => id != -1)];
+        }
+        var cards = await _cardServices.GetAllCards(exlcudeIds);
         return Ok(cards);
     }
     [HttpGet("{id}")]
@@ -32,7 +39,7 @@ public class CardController : ControllerBase
         return Ok(card);
     }
     [HttpGet("category/{cateogry}")]
-    public async Task<IActionResult> GetAllCards([FromRoute]string cateogry)
+    public async Task<IActionResult> GetAllCardsByCategory([FromRoute] string cateogry)
     {
         var cards = await _cardServices.GetAllCardsByCategory(cateogry);
         return Ok(cards);

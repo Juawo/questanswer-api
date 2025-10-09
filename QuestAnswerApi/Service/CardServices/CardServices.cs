@@ -20,9 +20,9 @@ public class CardServices : ICardServices
         return await _cardRepository.DeleteCardAsync(id);
     }
 
-    public async Task<IEnumerable<Card>> GetAllCards()
+    public async Task<IEnumerable<Card>> GetAllCards(List<long> excludeIds)
     {
-        return await _cardRepository.GetAllCardsAsync();
+        return await _cardRepository.GetAllCardsAsync(excludeIds);
     }
 
     public async Task<IEnumerable<Card>> GetAllCardsByCategory(string category)

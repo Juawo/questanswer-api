@@ -4,7 +4,7 @@ using QuestAnswerApi.Models;
 public interface ICardRepository
 {
     Task<Card?> GetCardByIdAsync(long id);
-    Task<IEnumerable<Card>> GetAllCardsAsync();
+    Task<IEnumerable<Card>> GetAllCardsAsync(List<long> excludeIds);
     Task<IEnumerable<Card>> GetAllCardsByCategoryAsync(string category);
     Task CreateCardAsync(Card card);
     Task<bool> UpdateCardAsync(Card card);
