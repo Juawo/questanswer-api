@@ -62,7 +62,7 @@ DTOs are used to transfer data between layers
 ```
 
 ## Architecture Diagram
-<img width="1920" height="1080" alt="arquitetura_sistema" src="https://github.com/user-attachments/assets/6b4ca3bd-63a6-48b7-9074-1f3f40bb9b04" />
+<img width="1920" height="1080" alt="Sistema de Computador" src="https://github.com/user-attachments/assets/ee3a5998-edad-4493-9b7a-9c90cd435ad5" />
 
 ## Technical Decisions
 
