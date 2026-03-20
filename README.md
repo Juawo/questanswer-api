@@ -5,6 +5,7 @@
 ![Rider](https://img.shields.io/badge/Rider-IDE-000000?style=for-the-badge&logo=jetbrains&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 ![REST](https://img.shields.io/badge/REST-API-black?style=for-the-badge)
+![ngrok](https://img.shields.io/badge/ngrok-Tunneling-1F1E37?style=for-the-badge&logo=ngrok&logoColor=white)
 
 A RESTful ASP.NET Web API responsible for managing and serving trivia cards for the QuestAnswer game.
 
@@ -86,6 +87,7 @@ The architecture allows future expansion (authentication, leaderboard, etc.) wit
 ![Rider](https://img.shields.io/badge/Rider-IDE-000000?style=for-the-badge&logo=jetbrains&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 ![REST](https://img.shields.io/badge/REST-API-black?style=for-the-badge)
+![ngrok](https://img.shields.io/badge/ngrok-Tunneling-1F1E37?style=for-the-badge&logo=ngrok&logoColor=white)
 ## How to Run
 ```text
 Clone the repository:
@@ -110,6 +112,8 @@ dotnet run
 ## Project Status
 
 **In development** — currently supports card storage and retrieval, with future expansion planned.
+This API is currently in the prototype stage and is not deployed to a production environment yet.
+For testing and integration with the mobile client, the API is exposed using **ngrok**, allowing temporary public access to the local development server.
 
 ## Differentials
 
