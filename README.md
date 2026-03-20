@@ -27,14 +27,14 @@ This API acts as the bridge between the game client and the database, ensuring e
 
 ---
 
-## 🚀 Features
+## Features
 
 - RESTful API for trivia card storage and retrieval
 - Integration with game client (Godot)
 - Supports dynamic card fetching based on gameplay needs
 - Persistent storage of trivia cards in database
 
-### 🔮 Planned Features
+### Planned Features
 
 - Player authentication (JWT-based)
 - Score tracking system
