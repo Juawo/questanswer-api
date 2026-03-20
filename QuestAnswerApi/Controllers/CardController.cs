@@ -29,7 +29,7 @@ public class CardController : ControllerBase
             .Select(idStr => long.TryParse(idStr, out var id) ? id : -1)
             .Where(id => id != -1)];
         }
-        var cards = await _cardServices.GetAllCards(exlcudeIds);
+        var cards = await _cardServices.GetAllCards(exlcudeIds); 
         return Ok(cards);
     }
     [HttpGet("{id}")]
