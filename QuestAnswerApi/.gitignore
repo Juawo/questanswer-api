@@ -1,5 +1,10 @@
 bin/
 obj/
+.props
 .fake
 .cache
 .assemblyInfo
+.idea
+.idea/
+.rider/
+*.user
